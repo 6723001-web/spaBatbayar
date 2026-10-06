@@ -1,10 +1,13 @@
+import { renderPageLayout } from "../layouts/pageLayout.js";
+
 export function renderOverviewPage() {
   const app = document.getElementById("app");
 
-  app.innerHTML = `
-    <div class="box">
-      <h2 class="title is-4">Overview</h2>
+  app.innerHTML = renderPageLayout({
+    id: "overview",
+    title: "Overview",
+    content: `
       <p>Welcome to the overview page.</p>
-    </div>
-  `;
+    `,
+  });
 }
