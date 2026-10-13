@@ -22992,5 +22992,17 @@ has-background-danger.is-hoverable:active {
     font-size: 0.95rem;
   }
 }
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #101820 0%, #172a3a 50%, #1d4038 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /*# sourceMappingURL=main.css.map */
