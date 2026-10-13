@@ -1,22 +1,22 @@
 @use "sass:color";
 
 // variables
-$primaryColor: #2bac73;
+$primaryColor: #59a701;
 $primaryColorDark: color.scale($primaryColor, $lightness: -15%);
 
-$secondaryColor: #ff914d;
+$secondaryColor: #e63a0f;
 $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
 
 :root {
-  --border: #ececf2;
+  --border: #5a5a7a;
   --sidebar-width: clamp(280px, 22vw, 340px); // Sidebar-ийн өргөн (280px-340px хооронд, дэлгэцийн 22%-ийг эзэлнэ)
-  --sidebar-bg: #ffffff;
+  --sidebar-bg: #853d3d;
   --page-bg: #ffffff;
-  --text-main: #23262f;
+  --text-main: #636f92;
   --text-soft: #6b7280;
-  --pink: #ff6f91;
-  --green: #2bac73;
-  --orange: #ff914d;
+  --pink: #85253b;
+  --green: #70bd9a;
+  --orange: #b6a64b;
   --active-bg: #fff2e8;
   --hover-bg: #f7f7fa;
   --overlay: rgba(15, 23, 42, 0.55);
@@ -29,6 +29,7 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
 @import "./layouts/sidebarPageLayout";
 @import "./components/sidebarMenuList";
 @import "./layouts/pageTableContentsLayout";
+@import "./components/imageModal";
 
 // Mobile (<768px) → Sidebar = slide menu (hidden → open)
 // Tablet (≤1023px) → зөвхөн хэмжээ багасгана
@@ -102,7 +103,7 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
     min-width: unset;
     height: 100vh;
     z-index: 40;
-    background: #fff;
+    background: #af8f8f;
     border-right: 1px solid var(--border);
     border-bottom: 0;
     padding: 1rem 1rem 2rem;
@@ -110,7 +111,7 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
     /* Sidebar-г default үед нуух (зүүн тийш гаргана) */
     transform: translateX(-100%);
     transition: transform 0.28s ease;
-    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.14);
+    box-shadow: 10px 0 30px rgba(58, 57, 57, 0.14);
   }
 
   .app-sidebar.is-open {
@@ -130,9 +131,8 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
   // }
 
   .app-title {
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 1.15;
-    letter-spacing: -0.03em;
   }
 
   .app-subtitle {
@@ -154,7 +154,7 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
   // }
 
   .app-title {
-    font-size: 1.75rem;
+    font-size: 1.45rem;
   }
 
   .app-subtitle {
