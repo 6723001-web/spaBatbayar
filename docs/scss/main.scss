@@ -30,6 +30,8 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
 @import "./components/sidebarMenuList";
 @import "./layouts/pageTableContentsLayout";
 @import "./components/imageModal";
+@import "./components/map";
+@import "./components/overviewText";
 
 // Mobile (<768px) → Sidebar = slide menu (hidden → open)
 // Tablet (≤1023px) → зөвхөн хэмжээ багасгана
@@ -38,11 +40,10 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
 /* =========================
    DESKTOP (>=769px)
 ========================= */
-@media screen and (min-width: 769px) {
-  .app-mobile-sidebar,
-  .app-sidebar-mobile-head {
-    /* Mobile-д зориулсан элементүүдийг нуух */
-    display: none;
+@media screen and (max-width: 768px) {
+  .app-shell {
+    display: block; /* Sidebar + main layout-ийг stack болгоно */
+    height: auto;
   }
 
   .app-sidebar {
@@ -160,4 +161,19 @@ $secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
   .app-subtitle {
     font-size: 0.95rem;
   }
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  background: linear-gradient(135deg, #101820 0%, #172a3a 50%, #1d4038 100%);
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
